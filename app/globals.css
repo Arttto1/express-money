@@ -18,3 +18,7 @@ html {
   color: #3EC1C9;
   scale: 110%;
 }
+
+p {
+  font-size: 1.125rem;
+}

@@ -7,7 +7,6 @@ const roboto = Roboto({
 });
 
 import MainHeader from "@/components/main-header/main-header";
-import MainPageNav from "@/components/page-nav/main-page-nav";
 import "./globals.css";
 
 export const metadata = {
@@ -20,18 +19,10 @@ export const viewport = "width=device-width, initial-scale=1.0";
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={roboto.className}>
-      <body className="bg-[#dbecff]">
+      <body className="bg-[#ccd2db]">
         <MainHeader />
-        <div className="mx-auto max-w-[90vw]">
-          <h1 className="text-center font-bold md:text-3xl text-xl">
-            Transformando suas finanças com{" "}
-            <span className="text-customLightBlue md:text-4xl text-2xl">
-              soluções inteligentes.
-            </span>
-          </h1>
-        </div>
-        <MainPageNav />
         {children}
+        
       </body>
     </html>
   );

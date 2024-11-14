@@ -1,121 +1,102 @@
 import Image from "next/image";
 
+import classes from "./page.module.css";
+import MainPageNav from "@/components/page-nav/main-page-nav";
+import Link from "next/link";
+
 export default function SvUm() {
   return (
     <>
-      <article className="max-w-[80vw] mx-auto mt-4 bg-[#f8fbff] border-2 border-customLightBlue shadow-[6px_10px_20px_rgba(20,66,117,0.7)] mb-10 rounded-md p-4">
-        <div className="flex flex-col justify-center">
-          <h1 className="font-bold text-lg text-center mb-4">
-            Empréstimo com garantia de imóvel
-          </h1>
-          <div id="prazos" className="flex items-center mb-4 justify-between">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-10"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                />
-              </svg>
-              <div>
-                <h2 className="font-bold text-xl">Prazos mais longos</h2>
-                <p>
-                  Até{" "}
-                  <span className="text-customLightBlue underline decoration-2">
-                    240 meses
-                  </span>{" "}
-                  para pagar.
-                </p>
-                <p>
-                  Crédito de <span className="font-bold">R$100 mil</span> a{" "}
-                  <span className="font-bold">R$10 milhões</span>.
-                </p>
-              </div>
-            </div>
-          <p className="text-lg">
-            Obtenha o crédito que você precisa com garantia de imóvel,
-            oferecendo prazos flexíveis, condições vantajosas e um processo
-            rápido. Transforme seu imóvel em um recurso para alcançar seus
-            objetivos com taxas acessíveis e segurança.
-          </p>
-        </div>
-        <div className="">
-          <div
-            id="vantagens"
-            className=" border-2 border-customLightBlue rounded-2xl"
-          >
+      <article className="py-[4.9rem]">
+        <div className="relative">
+          <Image
+            className="w-full h-full max-h-[50vh] rounded-b-xl object-center object-cover"
+            src="/images/landscape-hero-page1.webp"
+            alt="Cliente feliz com a consultoria"
+            width={1920}
+            height={1080}
+            priority
+          />
+          <div className="bg-black rounded-b-xl absolute opacity-30 inset-0"></div>
 
-            <div id="valores-maiores" className="flex items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-10"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"
-                />
-              </svg>
+          <div
+            className={`${classes.slideHero} absolute inset-0 translate-y-[-5%]`}
+          >
+            <h1
+              className={`text-white text-center font-bold md:text-4xl text-xl`}
+            >
+              Transformando suas finanças com{" "}
+            </h1>
+            <div className="flex justify-center">
               <div>
-                <h2 className="font-bold">Valores Maiores</h2>
-                <p>
-                  Consiga até{" "}
-                  <span className="text-customLightBlue underline decoration-2">
-                    50%
-                  </span>{" "}
-                  do valor do seu imóvel.
-                </p>
-              </div>
-            </div>
-            <div id="melhores-taxas" className="flex items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-10"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.25 6 9 12.75l4.286-4.286a11.948 11.948 0 0 1 4.306 6.43l.776 2.898m0 0 3.182-5.511m-3.182 5.51-5.511-3.181"
-                />
-              </svg>
-              <div>
-                <h2 className="font-bold">Taxas Vantajosas</h2>
-                <p>
-                  A partir de{" "}
-                  <span className="text-customLightBlue underline decoration-2">
-                    1,09%
-                  </span>{" "}
-                  ao mês.
+                <p
+                  className={`${classes.typing} w-0 font-extrabold text-customLightBlue md:text-5xl text-2xl`}
+                >
+                  soluções inteligentes.
                 </p>
               </div>
             </div>
           </div>
-          {/* <div id="image" className="">
-            <Image
-              className="w-[200rem]"
-              src="/images/undraw-pageone.svg"
-              alt="Cliente feliz com a consultoria"
-              width={1280}
-              height={720}
+
+          <div className="absolute flex flex-col inset-0 justify-center left-[10vw]">
+            <h1
+              className={`${classes.slideTitle} translate-x-[-100%] font-bold text-4xl text-[#4DBD7C]`}
+            >
+              Empréstimo com garantia de imóvel
+            </h1>
+            <hr
+              className={`${classes.slideLine} translate-x-[-150%] w-[36.25rem] border-t-2 border-[#4DBD7C] my-4`}
             />
-          </div> */}
+            <p
+              className={`${classes.slideTextOne} translate-x-[-120%] text-xl text-white max-w-[50vw]`}
+            >
+              Obtenha o crédito que você precisa com prazos flexíveis e
+              condições vantajosas.
+            </p>
+            <p
+              className={`${classes.slideTextTwo} translate-x-[-120%] text-xl text-white max-w-[50vw]`}
+            >
+              Transforme seu imóvel em um recurso para alcançar seus objetivos
+              com taxas acessíveis e segurança.
+            </p>
+          </div>
+          <Link
+            href={"/"}
+            className={`${classes.slideButton} translate-y-[200%] opacity-0 md:text-2xl text-white font-bold absolute left-[10%] top-[80%] px-4 py-2 border-2 border-[#4DBD7C] rounded-full hover:text-[#4DBD7C] hover:bg-white hover:border-transparent hover:scale-110 transition-all duration-300`}
+          >
+            Simule já
+          </Link>
         </div>
+
+        <h2 className={`md:text-4xl text-center font-bold mb-4 mt-8`}>
+          Serviços
+        </h2>
+        <MainPageNav />
+
+        <div className={`md:text-4xl text-center my-8`}>
+          <h2 className={`mb-4`}>
+            Porque escolher a{" "}
+            <span className={`text-customLightBlue underline font-extrabold`}>
+              Express Money
+            </span>
+          </h2>
+          <p className={`md:text-xl max-w-[50vw] m-auto`}>
+            A Express Money é uma fintech dedicada a oferecer empréstimos com
+            garantia de imóvel (Home Equity), com o objetivo de simplificar e
+            agilizar cada etapa do processo. Priorizamos relações baseadas em
+            transparência, sempre mantendo uma comunicação honesta com nossos
+            clientes e parceiros.
+          </p>
+        </div>
+
+        <Image
+          className={`${classes.animateImage} opacity-0 m-auto`}
+          src="/images/vantagens-page1.svg"
+          alt="Cliente feliz com a consultoria"
+          width={700}
+          height={500}
+        />
       </article>
-      <h1>aa</h1>
     </>
   );
 }
