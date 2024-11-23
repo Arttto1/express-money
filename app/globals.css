@@ -13,6 +13,8 @@ html {
   height: 100%;
 }
 
+
+
 .active {
   background-color: #37506C;
   color: #3EC1C9;
@@ -21,4 +23,112 @@ html {
 
 p {
   font-size: 1.125rem;
+}
+
+@keyframes animateNav {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.slideNav {
+  transform: translateY(200%);
+  opacity: 0;
+  scale: 0.5;
+  animation: animateNav 0.75s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideNavText {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.slideNavText {
+  transform: translateY(-100%);
+  opacity: 0;
+  scale: 0.5;
+  animation: animateNav 0.75s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes appear {
+  from {
+    scale: 0.5;
+    opacity: 0;
+  }
+
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.appear {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry ;
+}
+
+@keyframes backdropTransition {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.backdropTransition {
+  animation: backdropTransition 1s ease-in-out forwards;
+}
+
+@keyframes textAnimation {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.textAnimation {
+  animation: textAnimation .5s ease-in-out forwards;
+}
+    
+#faq {
+  article{
+    display: flex;
+    flex-direction: column;
+    background-color: #37506C;
+    padding: 16px;
+    gap: 10px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 8px rgba(0,0,0,0.3);
+  }
+  h1{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #4DBD7C;
+  }
+  p{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    padding-left: 12px;
+    color: #ccd2db;
+  }
 }

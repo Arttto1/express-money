@@ -21,12 +21,12 @@ export default function MainHeader() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.addEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   return (
-    <header className={`bg-[#ccd2db] rounded-lg ${isVisible ? "translate-y-0" : "-translate-y-[110%]"} fixed top-0 left-0 right-0 z-50 transition-all duration-[600ms]`}>
-      <div className="bg-customDarkBlue max-w-[99vw] rounded-lg mx-auto my-[0.5vw]">
+    <header className={`bg-[#ccd2db] rounded-lg pb-[4px] ${isVisible ? "translate-y-0" : "-translate-y-[110%]"} fixed top-0 left-0 right-0 z-50 transition-all duration-[600ms]`}>
+      <div className="bg-customDarkBlue rounded-b-lg">
         <div className="flex justify-between items-center mx-auto max-w-[90vw] md:max-w-80vw">
           <Link
             className="flex justify-center items-center font-bold text-2xl"

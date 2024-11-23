@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         customDarkBlue: "#37506C",
         customLightBlue: "#3EC1C9",
-        customBackground: "#ccd2db"
+        customBackground: "#ccd2db",
+        customGreen: "#4DBD7C"
       },
       maxWidth: {
         "80vw": "80vw",

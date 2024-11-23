@@ -56,22 +56,22 @@
 
 .slideTitle {
   animation: slideIn 2s ease-in-out forwards;
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
 }
 
 .slideLine {
   animation: slideIn 1.5s ease-in-out forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 .slideTextOne {
   animation: slideIn 2s ease-in-out forwards;
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
 }
 
 .slideTextTwo {
   animation: slideIn 2s ease-in-out forwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 @keyframes slideButton {

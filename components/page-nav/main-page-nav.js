@@ -1,8 +1,9 @@
 import NavItem from "./nav-item";
+import "../../app/globals.css";
 
 export default function MainPageNav() {
   return (
-    <ul className="md:flex grid grid-cols-2 grid-rows-2 gap-4 w-fit mx-auto rounded-md bg-white">
+    <ul className={`slideNav md:flex grid grid-cols-2 grid-rows-2 gap-4 w-fit mx-auto rounded-md bg-white`}>
       <li>
         <NavItem
           href="/svum"
