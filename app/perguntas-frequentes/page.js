@@ -56,10 +56,10 @@ export default function FAQPage() {
 
           <article className="bg-gray-100 p-4 rounded-md shadow-sm">
             <h2 className="text-lg font-semibold text-customDarkBlue mb-2">
-              Preciso pagar alguma taxa antecipada para a CasanetCred?
+              Preciso pagar alguma taxa antecipada para a Express Money?
             </h2>
             <p className="text-base text-gray-100">
-              Não. A CasanetCred não exige nenhum pagamento antecipado de seus
+              Não. A Express Money não exige nenhum pagamento antecipado de seus
               clientes.
             </p>
           </article>
@@ -142,7 +142,7 @@ export default function FAQPage() {
 
         {/* Link para mais informações */}
         <Link
-          href="/perguntas-frequentes"
+          href="/"
           className="font-bold text-lg w-fit m-auto rounded-full border-[3px] border-customGreen px-6 py-3 text-customGreen hover:bg-customGreen hover:text-white hover:border-transparent hover:scale-105 transition-all duration-300"
         >
           Voltar à Página Inicial

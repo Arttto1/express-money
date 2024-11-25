@@ -98,26 +98,26 @@ export default function ImageSlide() {
             key={currentIndex}
           >
             <h1
-              className={`${classes.slideTitle} translate-x-[-62%] font-bold text-3xl text-[#4DBD7C]`}
+              className={`${classes.slideTitle} translate-x-[-40rem] opacity-0 font-bold text-3xl text-[#4DBD7C]`}
             >
               Empréstimo com garantia de imóvel
             </h1>
             <hr
-              className={`${classes.slideLine} translate-x-[-150%] w-[30.4rem] border-t-2 border-[#4DBD7C] my-2`}
+              className={`${classes.slideLine} translate-x-[-40rem] opacity-0 w-[30.4rem] border-t-2 border-[#4DBD7C] my-2`}
             />
             <p
-              className={`${classes.slideTextOne} translate-x-[-130%] text-xl mb-2 text-white w-[100%]`}
+              className={`${classes.slideTextOne} translate-x-[-40rem] opacity-0 text-xl mb-2 text-white w-[100%]`}
             >
               {content[currentIndex].text1}
             </p>
             <p
-              className={`${classes.slideTextTwo} translate-x-[-130%] text-xl text-white w-[100%]`}
+              className={`${classes.slideTextTwo} translate-x-[-40rem] opacity-0 text-xl text-white w-[100%]`}
             >
               {content[currentIndex].text2}
             </p>
             <Link
               href={"/"}
-              className={`${classes.slideButton} translate-y-[200%] opacity-0 md:text-xl text-white font-bold absolute top-[75%] px-3 py-1 border-2 border-[#4DBD7C] rounded-full hover:text-[#4DBD7C] hover:bg-white hover:border-transparent hover:scale-110 transition-all duration-300`}
+              className={`${classes.slideButton} w-fit mt-6 translate-y-[20rem] opacity-0 md:text-2xl text-white font-bold px-3 py-1 border-2 border-[#4DBD7C] rounded-full hover:text-[#4DBD7C] hover:bg-white hover:border-transparent hover:scale-110 transition-all duration-300`}
             >
               Saiba Mais
             </Link>
