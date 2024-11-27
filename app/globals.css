@@ -21,10 +21,6 @@ html {
   scale: 110%;
 }
 
-p {
-  font-size: 1.125rem;
-}
-
 @keyframes animateNav {
   100% {
     transform: translateY(0);
@@ -131,4 +127,13 @@ p {
     padding-left: 12px;
     color: #ccd2db;
   }
+}
+
+.footer-text a {
+  display: inline-block;
+  transition: transform 150ms ease-in-out;
+}
+
+.footer-text a:hover {
+  transform: translateX(1rem);
 }

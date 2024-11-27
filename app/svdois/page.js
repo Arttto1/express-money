@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import HeroSlide from "@/components/hero/hero";
+import ContactForm from "@/components/contact-form/contact-form";
 import "../../app/globals.css";
 import MainPageNav from "@/components/page-nav/main-page-nav";
 
@@ -142,65 +143,7 @@ export default function SvDois() {
         </h1>
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Formulário */}
-          <form className="flex  flex-col flex-1 gap-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex flex-col">
-                <label htmlFor="nome" className="font-medium">
-                  Nome
-                </label>
-                <input
-                  type="text"
-                  name="nome"
-                  id="nome"
-                  className="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-customLightBlue"
-                />
-              </div>
-              <div className="flex flex-col">
-                <label htmlFor="sobrenome" className="font-medium">
-                  Sobrenome
-                </label>
-                <input
-                  type="text"
-                  name="sobrenome"
-                  id="sobrenome"
-                  className="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-customLightBlue"
-                />
-              </div>
-              <div className="flex flex-col">
-                <label htmlFor="email" className="font-medium">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-customLightBlue"
-                />
-              </div>
-              <div className="flex flex-col">
-                <label htmlFor="telefone" className="font-medium">
-                  Telefone com DDD
-                </label>
-                <input
-                  type="tel"
-                  name="telefone"
-                  id="telefone"
-                  className="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-customLightBlue"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="mensagem" className="font-medium">
-                Mensagem
-              </label>
-              <textarea
-                name="mensagem"
-                id="mensagem"
-                rows={5}
-                className="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-customLightBlue resize-none"
-              ></textarea>
-            </div>
-          </form>
+          <ContactForm />
 
           {/* Texto de contato */}
           <div className="flex  flex-col w-fit">
