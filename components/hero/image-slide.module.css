@@ -23,7 +23,7 @@
   overflow: hidden;
   margin-inline: auto;
   white-space: nowrap;
-  animation: typing 1.5s steps(20) forwards,
+  animation: typing 3s steps(22) forwards,
   blink 1s step-end 6;
   animation-delay: 1.25s;
 }
