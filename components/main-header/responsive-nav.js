@@ -76,7 +76,7 @@ export default function NavBar({ ref }) {
           </svg>
         </button>
 
-        <div className={`fixed top-0 left-0 w-[100vw] pb-1 bg-customBackground rounded-lg duration-300 ${isMobileMenuOpen ? "translate-y-0" : "translate-y-[-100%]"}`}>
+        <div onClick={toggleMenu} className={`fixed top-0 left-0 w-[100vw] pb-1 bg-customBackground rounded-lg duration-300 ${isMobileMenuOpen ? "translate-y-0" : "translate-y-[-100%]"}`}>
           <div className="bg-customDarkBlue rounded-b-lg">
             <div className="flex justify-between items-center m-auto max-w-[90vw]">
               <Link
