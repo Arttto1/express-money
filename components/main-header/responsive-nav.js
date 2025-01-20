@@ -11,7 +11,6 @@ export default function NavBar({ ref }) {
 
   const toggleMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
-    console.log(isMobileMenuOpen);
   };
 
   const scrollTo = (ref) => {
@@ -92,7 +91,7 @@ export default function NavBar({ ref }) {
                   className="w-60"
                 />
               </Link>
-              <button onClick={toggleMenu} className="text-customBackground text-5xl">&times;</button>
+              <button className="text-customBackground text-5xl">&times;</button>
             </div>
             <nav className="flex justify-center text-center text-2xl py-8">
               <ul>

@@ -145,7 +145,7 @@ export default function SvDois() {
           <Veiculo ref={veiculoRef} />
         </div>
       </section>
-      <section  ref={contatoRef} id="contato" className="flex flex-col m-auto mt-20 max-w-[80vw]">
+      <section  ref={contatoRef} id="contato" className="flex flex-col items-center m-auto mt-20 max-w-[80vw]">
         <h1 className="lg:text-4xl text-2xl font-bold text-customDarkBlue mb-8 uppercase">
           Está com alguma dúvida?
         </h1>
