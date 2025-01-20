@@ -24,7 +24,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={roboto.className}>
       <body className="bg-[#ccd2db]">
-        <MainHeader />
         {children}
         <Footer />
       </body>

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import NavLink from "./nav-link";
 
-export default function NavBar() {
+export default function NavBar({ref}) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -14,15 +14,22 @@ export default function NavBar() {
     console.log(isMobileMenuOpen);
   };
 
+  const scrollTo = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
+};
+
   return (
     <>
       <nav id="desktop-header-nav" className="hidden md:block">
-        <ul className="flex">
+        <ul className="flex gap-4">
           <li>
-            <NavLink href="/quem-somos">Quem Somos</NavLink>
+            <button className="bg-customDarkBlue text-customBackground font-bold hover:scale-110 hover:text-customLightBlue duration-300 px-2 py-1" onClick={()=> {scrollTo(ref.quemSomos)}}>Quem Somos</button>
           </li>
           <li>
-            <NavLink href="/contato">Contate-nos</NavLink>
+            <button className="bg-customDarkBlue text-customBackground font-bold hover:scale-110 hover:text-customLightBlue duration-300 px-2 py-1" onClick={()=> {scrollTo(ref.contato)}}>Contate-nos</button>
+          </li>
+          <li>
+            <button className="bg-customDarkBlue text-customBackground font-bold hover:scale-110 hover:text-customLightBlue duration-300 px-2 py-1" onClick={()=> {scrollTo(ref.perguntas)}}>Perguntas Frequentes</button>
           </li>
         </ul>
       </nav>

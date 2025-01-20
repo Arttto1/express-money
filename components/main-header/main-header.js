@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import NavBar from "./responsive-nav";
 
-export default function MainHeader() {
+export default function MainHeader({ref}) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -41,7 +41,7 @@ export default function MainHeader() {
               className="w-60"
             />
           </Link>
-          <NavBar />
+          <NavBar ref={ref} />
         </div>
       </div>
     </header>

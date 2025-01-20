@@ -9,49 +9,12 @@ export default function Footer() {
           <Image
             src="/logo/express-money.png"
             alt="Express Money Logo"
-            width={300}
-            height={100}
+            width={500}
+            height={200}
             priority
             className="w-96 mx-auto sm:mx-0"
           />
-          <div className="flex flex-col sm:flex-row items-start pt-4 gap-8 sm:gap-12 footer-text overflow-visible">
-            <div className="text-lg text-gray-800 leading-5 mb-8 sm:mb-0">
-              <h1 className="mb-2 uppercase font-bold text-customBackground">
-                Produtos
-              </h1>
-
-              <ul>
-                <li>
-                  <Link href={"/"}>Empréstimo com Garantia de Imóvel</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>Financiamento de Veículos</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>Financiamento Imobiliário</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="text-lg text-gray-800 leading-5">
-              <h1 className="mb-2 uppercase font-bold text-customBackground">
-                Empresa
-              </h1>
-              <ul>
-                <li>
-                  <Link href={"/"}>Quem Somos</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>Perguntas Frequentes</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>Política de Privacidade</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>Contato</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+         
         </div>
         <hr className="mb-2 mt-2 border-customLightBlue" />
         <div className="leading-[0.85rem] text-xs text-gray-900">

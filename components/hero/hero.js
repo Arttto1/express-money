@@ -2,12 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import "../../app/globals.css";
 import classes from "./image-slide.module.css";
 
-export default function ImageSlide() {
+export default function ImageSlide({ ref }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isText, setIsText] = useState(false);
@@ -17,13 +16,17 @@ export default function ImageSlide() {
     setIsText(true);
 
     setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % 3);
+      setCurrentIndex((prev) => (prev + 1) % 4);
       setIsText(false);
     }, 500);
 
     setTimeout(() => {
       setIsAnimating(false);
     }, 1000);
+  };
+
+  const scrollTo = (ref) => {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
   useEffect(() => {
@@ -38,25 +41,39 @@ export default function ImageSlide() {
       alt: "landscape for home equity page",
       title: "Empréstimo com garantia de imóvel",
       text1:
-        "Obtenha o crédito que você precisa com prazos flexíveis e condições vantajosas.",
+        "Obtenha o recurso que voce necessita com taxas acessíveis e prazos flexíveis.",
       text2:
-        "Transforme seu imóvel em um recurso para alcançar seus objetivos com taxas acessíveis e segurança.",
+        "Transforme seu imóvel em dinheiro e realize seus projetos com segurança.",
+      ref: ref.imovel,
+    },
+    {
+      image: "/images/car-hero-page3.webp",
+      alt: "car image for vehicle financing page",
+      title: "Refinanciamento de veículos",
+      text1:
+        "Refinancie seu veículo e tenha até 70% do valor do mesmo em dinheiro na sua conta.",
+      text2: "Não fique no aperto, faça uma simulação!",
+      btnText: "Simule Já",
+      ref: ref.veiculo,
     },
     {
       image: "/images/dubai-hero-page2.webp",
       alt: "dubai image for real state financing page",
+      title: "Financiamento imobiliário",
       text1:
         "Realize a compra do seu imóvel, seja residencial ou comercial, com condições vantajosas e segurança.",
       text2:
         "Dê início à nova fase da sua vida com um financiamento acessível e simplificado.",
     },
+
     {
       image: "/images/car-hero-page3.webp",
       alt: "car image for vehicle financing page",
+      title: "Financiamento de veículos",
       text1:
-        "Adquira o carro dos seus sonhos com um financiamento que se adapta às suas necessidades.",
+        "Financie o seu veículo com as melhores taxas do mercado e crédito de até R$350.000",
       text2:
-        "Desfrute de uma experiência com opções flexíveis para que você acelere seu caminho para a liberdade e mobilidade.",
+        "Com a possibilidade de aprovação do financiamento até 70% do valor do veículo.",
     },
   ];
 
@@ -100,7 +117,7 @@ export default function ImageSlide() {
             <h1
               className={`${classes.slideTitle} translate-x-[-40rem] opacity-0 font-bold text-3xl text-[#4DBD7C]`}
             >
-              Empréstimo com garantia de imóvel
+              {content[currentIndex].title}
             </h1>
             <hr
               className={`${classes.slideLine} translate-x-[-40rem] opacity-0 w-[30.4rem] border-t-2 border-[#4DBD7C] my-2`}
@@ -115,12 +132,16 @@ export default function ImageSlide() {
             >
               {content[currentIndex].text2}
             </p>
-            <Link
-              href={"/"}
-              className={`${classes.slideButton} w-fit mt-6 translate-y-[20rem] opacity-0 md:text-2xl text-white font-bold px-3 py-1 border-2 border-[#4DBD7C] rounded-full hover:text-[#4DBD7C] hover:bg-white hover:border-transparent hover:scale-110 transition-all duration-300`}
-            >
-              Saiba Mais
-            </Link>
+            {content[currentIndex].ref && (
+              <button
+                onClick={() => scrollTo(content[currentIndex].ref)}
+                className={`${classes.slideButton} w-fit mt-6 translate-y-[20rem] opacity-0 md:text-2xl text-white font-bold px-3 py-1 border-2 border-[#4DBD7C] rounded-full hover:text-[#4DBD7C] hover:bg-white hover:border-transparent hover:scale-110 transition-all duration-300`}
+              >
+                {content[currentIndex].btnText
+                  ? content[currentIndex].btnText
+                  : "Saiba Mais"}
+              </button>
+            )}
           </div>
         </div>
       </header>
