@@ -82,7 +82,7 @@ export default function ImageSlide({ ref }) {
       <header className="absolute top-0 left-0 right-0">
         <div className="relative overflow-hidden ">
           <Image
-            className="w-full h-[100vh] rounded-b-xl object-cover object-bottom flex-shrink-0"
+            className="w-full lg:h-[100vh] h-[70vh] rounded-b-xl object-cover object-bottom flex-shrink-0"
             src={content[currentIndex].image}
             alt={content[0].alt}
             width={1268.8}
@@ -111,24 +111,24 @@ export default function ImageSlide({ ref }) {
           </div>
 
           <div
-            className={`absolute flex flex-col inset-0 top-[50%] left-[10vw] w-[30.4rem] ${isText ? "textAnimation" : ""}`}
+            className={`absolute flex flex-col inset-0 lg:top-[50%] top-[45%] left-[10vw] lg:text-left text-center w-[30.4rem] ${isText ? "textAnimation" : ""}`}
             key={currentIndex}
           >
             <h1
-              className={`${classes.slideTitle} translate-x-[-40rem] opacity-0 font-bold text-3xl text-[#4DBD7C]`}
+              className={`${classes.slideTitle} translate-x-[-40rem] opacity-0 font-bold lg:text-3xl text-2xl text-[#4DBD7C] lg:w-[100%] w-[80vw]`}
             >
               {content[currentIndex].title}
             </h1>
             <hr
-              className={`${classes.slideLine} translate-x-[-40rem] opacity-0 w-[30.4rem] border-t-2 border-[#4DBD7C] my-2`}
+              className={`${classes.slideLine} translate-x-[-40rem] opacity-0 lg:w-[30.4rem] w-[80vw] border-t-2 border-[#4DBD7C] my-2`}
             />
             <p
-              className={`${classes.slideTextOne} translate-x-[-40rem] opacity-0 text-xl mb-2 text-white w-[100%]`}
+              className={`${classes.slideTextOne} translate-x-[-40rem] opacity-0 text-xl mb-2 text-white lg:w-[100%] w-[80vw]`}
             >
               {content[currentIndex].text1}
             </p>
             <p
-              className={`${classes.slideTextTwo} translate-x-[-40rem] opacity-0 text-xl text-white w-[100%]`}
+              className={`${classes.slideTextTwo} translate-x-[-40rem] opacity-0 text-xl text-white lg:w-[100%] w-[80vw]`}
             >
               {content[currentIndex].text2}
             </p>

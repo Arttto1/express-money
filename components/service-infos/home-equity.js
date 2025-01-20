@@ -2,11 +2,11 @@ import React, { forwardRef } from "react";
 
 const HomeEquity = forwardRef((props, ref) => {
   return (<div ref={ref}>
-    <h2 className="text-customGreen lg:text-3xl font-bold text-center mb-4">
+    <h2 className="text-customGreen lg:text-3xl text-2xl font-bold text-center mb-4">
       Empréstimo com garantia de imóvel
     </h2>
     <div className="flex flex-col items-center gap-4">
-      <div className="flex flex-col gap-2 lg:w-[40vw] items-center justify-center bg-customDarkBlue p-4 rounded-lg shadow-md">
+      <div className="flex flex-col gap-2 lg:w-[40vw] w-[100%] items-center justify-center bg-customDarkBlue p-4 rounded-lg shadow-md">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -22,22 +22,22 @@ const HomeEquity = forwardRef((props, ref) => {
           />
         </svg>
 
-        <h3 className="text-customLightBlue text-xl font-bold">
+        <h3 className="text-customLightBlue lg:text-xl text-lg font-bold">
           VALORES MAIORES{" "}
         </h3>
-        <div className="lg:text-xl text-center">
+        <div className="lg:text-xl text-lg text-center">
           <p>
             Consiga até{" "}
-            <span className="text-customBackground text-2xl">50%</span> do
+            <span className="text-customBackground text-xl lg:text-2xl">50%</span> do
             valor do seu imóvel.
           </p>
           <p>
             Crédito de{" "}
-            <span className="text-customBackground text-2xl">
+            <span className="text-customBackground text-xl lg:text-2xl">
               R$100 mil{" "}
             </span>{" "}
             a{" "}
-            <span className="text-customBackground text-2xl">
+            <span className="text-customBackground text-xl lg:text-2xl">
               R$10 milhões
             </span>
           </p>
@@ -59,13 +59,13 @@ const HomeEquity = forwardRef((props, ref) => {
               d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
             />
           </svg>
-          <h3 className="text-customLightBlue text-xl font-bold">
+          <h3 className="text-customLightBlue lg:text-xl text-lg font-bold">
             PRAZOS MAIS LONGOS
           </h3>
 
-          <p className="text-xl">
+          <p className="lg:text-xl text-lg">
             Até{" "}
-            <span className="text-customBackground text-2xl">
+            <span className="text-customBackground text-xl lg:text-2xl">
               240 meses
             </span>{" "}
             para pagar.
@@ -88,12 +88,12 @@ const HomeEquity = forwardRef((props, ref) => {
             />
           </svg>
 
-          <h3 className="text-customLightBlue text-xl font-bold">
+          <h3 className="text-customLightBlue lg:text-xl text-lg font-bold">
             TAXAS VANTAJOSAS
           </h3>
-          <p>
+          <p className="lg:text-xl text-lg">
             A partir de{" "}
-            <span className="text-customBackground text-2xl">1.09%</span>{" "}
+            <span className="text-customBackground lg:text-2xl text-xl">1.09%</span>{" "}
             ao mês.
           </p>
         </div>

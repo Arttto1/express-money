@@ -1,11 +1,11 @@
 export default function Construcao() {
   return (
     <div>
-      <h2 className="text-customGreen lg:text-3xl font-bold text-center mb-4">
+      <h2 className="text-customGreen text-2xl lg:text-3xl font-bold text-center mb-4">
         Empréstimo para construção
       </h2>
       <div className="flex flex-col items-center gap-4">
-        <div className="flex flex-col gap-2 lg:w-[28vw] items-center justify-center bg-customDarkBlue p-4 rounded-lg shadow-md">
+        <div className="flex flex-col gap-2 lg:w-[28vw] w-[90vw] items-center justify-center bg-customDarkBlue p-4 rounded-lg shadow-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -21,10 +21,10 @@ export default function Construcao() {
             />
           </svg>
 
-          <h3 className="text-customLightBlue text-xl font-bold">
+          <h3 className="text-customLightBlue lg:text-xl text-lg font-bold">
             TERRENO COMO GARANTIA
           </h3>
-          <div className="lg:text-xl text-center">
+          <div className="lg:text-xl text-lg text-center">
             <p>Utilize o seu terreno como garantia.</p>
           </div>
         </div>

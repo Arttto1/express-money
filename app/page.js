@@ -21,11 +21,11 @@ export default function SvDois() {
   return (
     <>
       <MainHeader ref={{ quemSomos: quemSomosRef, contato: contatoRef, perguntas: perguntasRef }}/>
-      <div className="w-full bg-transparent h-[100vh]"></div>
+      <div className="w-full bg-transparent lg:h-[100vh] h-[70vh]"></div>
       <HeroSlide ref={{ veiculo: veiculoRef, imovel: HomeEquityRef }} />
       <section id="about" className="mt-8 px-4">
         {/* Título */}
-        <h1 className="text-3xl lg:text-4xl text-customGreen text-center font-bold mb-6 uppercase appear">
+        <h1 className="text-2xl lg:text-4xl text-customGreen text-center font-bold mb-6 uppercase appear">
           Sobre Nós
         </h1>
 
@@ -136,17 +136,17 @@ export default function SvDois() {
         </div>
       </section>
       <section className="mt-10 w-full">
-        <h1 className="text-3xl lg:text-4xl text-customDarkBlue text-center font-bold mb-6 uppercase">
+        <h1 className="text-2xl lg:text-4xl text-customDarkBlue text-center font-bold mb-6 uppercase">
           Saiba mais sobre nossos serviços
         </h1>
-        <div className="flex flex-col gap-8 items-center">
+        <div className="flex flex-col gap-8 items-center justify-center m-auto max-w-[90vw]">
           <HomeEquity ref={HomeEquityRef} />
           <Construcao />
           <Veiculo ref={veiculoRef} />
         </div>
       </section>
       <section  ref={contatoRef} id="contato" className="flex flex-col m-auto mt-20 max-w-[80vw]">
-        <h1 className="text-4xl font-bold text-customDarkBlue mb-8 uppercase">
+        <h1 className="lg:text-4xl text-2xl font-bold text-customDarkBlue mb-8 uppercase">
           Está com alguma dúvida?
         </h1>
         <div className="flex flex-col lg:flex-row gap-8">
