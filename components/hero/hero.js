@@ -44,6 +44,7 @@ export default function ImageSlide({ ref }) {
         "Obtenha o recurso que voce necessita com taxas acessíveis e prazos flexíveis.",
       text2:
         "Transforme seu imóvel em dinheiro e realize seus projetos com segurança.",
+        btnText: "Simule Já",
       ref: ref.imovel,
     },
     {

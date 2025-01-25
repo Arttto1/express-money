@@ -10,6 +10,7 @@ import "./globals.css";
 import HomeEquity from "@/components/service-infos/home-equity";
 import Construcao from "@/components/service-infos/construcao";
 import Veiculo from "@/components/service-infos/veiculo";
+import Parceiros from "@/components/parceiros/parceiros";
 
 export default function SvDois() {
   const quemSomosRef = useRef(null);
@@ -208,6 +209,7 @@ export default function SvDois() {
           ></Image>
         </div>
       </section>
+      <section><Parceiros/></section>
 
       <section
       ref={perguntasRef}
