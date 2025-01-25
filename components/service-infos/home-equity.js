@@ -122,7 +122,7 @@ const HomeEquity = forwardRef((props, ref) => {
             </svg>
 
             <h3 className="text-customLightBlue lg:text-xl text-lg text-center font-bold">
-              SIMULE SEU EMPRŚTIMO
+              SIMULE SEU EMPRÉSTIMO
             </h3>
             <div className="lg:text-xl text-lg text-center">
               <p>
